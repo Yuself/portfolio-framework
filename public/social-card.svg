@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Portfolio Framework</title>
+  <desc id="description">A privacy-safe, config-driven frontend portfolio framework.</desc>
+  <rect width="1200" height="630" fill="#f2f0e8"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="#171915"/>
+  <circle cx="1019" cy="159" r="92" fill="#c8ff3d"/>
+  <path d="M1019 103v112M963 159h112" stroke="#171915" stroke-width="16" stroke-linecap="round"/>
+  <text x="112" y="174" fill="#c8ff3d" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="4">PUBLIC-READY FRONTEND SYSTEM</text>
+  <text x="112" y="313" fill="#f2f0e8" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700">Portfolio</text>
+  <text x="112" y="403" fill="#f2f0e8" font-family="Arial, Helvetica, sans-serif" font-size="82" font-weight="700">Framework</text>
+  <text x="112" y="500" fill="#b9bdb1" font-family="Arial, Helvetica, sans-serif" font-size="30">Typed content · Accessible UI · Tested privacy gates</text>
+</svg>
