@@ -6,6 +6,9 @@ import { ProjectGrid } from "@/components/portfolio/project-grid";
 import { SiteHeader } from "@/components/portfolio/site-header";
 import { Reveal } from "@/components/ui/reveal";
 import { demoContent } from "@/content/demo-content";
+import { assertValidPortfolioContent } from "@/lib/portfolio-schema";
+
+assertValidPortfolioContent(demoContent);
 
 export default function Home() {
   return (

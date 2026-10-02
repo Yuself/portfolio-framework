@@ -98,3 +98,12 @@ export function validatePortfolioContent(value: unknown): string[] {
 
   return errors;
 }
+
+export function assertValidPortfolioContent(
+  value: unknown,
+): asserts value is PortfolioContent {
+  const errors = validatePortfolioContent(value);
+  if (errors.length > 0) {
+    throw new Error(`Portfolio content is invalid: ${errors.join("; ")}`);
+  }
+}

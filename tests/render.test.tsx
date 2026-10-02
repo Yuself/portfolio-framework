@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import Home from "@/app/page";
+import { SiteHeader } from "@/components/portfolio/site-header";
 
 describe("portfolio home", () => {
   it("renders the fictional profile with semantic project articles", () => {
@@ -36,5 +37,13 @@ describe("portfolio home", () => {
       expect(headingId).toBeTruthy();
       expect(container.querySelector(`#${headingId}`)).toBeInTheDocument();
     }
+  });
+
+  it("derives the wordmark from the configured display name", () => {
+    render(<SiteHeader displayName="Jordan Lee" />);
+
+    expect(screen.getByRole("link", { name: "Jordan Lee, home" })).toHaveTextContent(
+      "JL/PF",
+    );
   });
 });

@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { demoContent } from "@/content/demo-content";
-import { validatePortfolioContent } from "@/lib/portfolio-schema";
+import {
+  assertValidPortfolioContent,
+  validatePortfolioContent,
+} from "@/lib/portfolio-schema";
 
 describe("validatePortfolioContent", () => {
   it("accepts the complete fictional demo content", () => {
@@ -12,6 +15,14 @@ describe("validatePortfolioContent", () => {
     expect(
       validatePortfolioContent({ ...demoContent, email: invalidEmail }),
     ).toContain("email must use example.com");
+  });
+
+  it("throws before composition when content is invalid", () => {
+    const invalidEmail = ["private", "example.net"].join("@");
+
+    expect(() =>
+      assertValidPortfolioContent({ ...demoContent, email: invalidEmail }),
+    ).toThrow("Portfolio content is invalid: email must use example.com");
   });
 
   it.each(["title", "summary", "stack", "category", "highlights"])(
